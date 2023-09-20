@@ -1,13 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Container, Button } from './FeedbackOptions.styled';
-
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+import { Button, ButttonWrapper } from './FeedbackOptions.styled';
+const FeedbackOptions = ({ onClick, options }) => {
   return (
-    <Container>
+    <ButttonWrapper className="button-wrapper">
       {options.map(option => (
-        
+        <Button
+          key={option}
+          type="button"
+          onClick={() => onClick(option)}
+          data-option={option}
+        >
+          {option}
+        </Button>
       ))}
-    </Container>
-  )
-}
+    </ButttonWrapper>
+  );
+};
+export default FeedbackOptions;

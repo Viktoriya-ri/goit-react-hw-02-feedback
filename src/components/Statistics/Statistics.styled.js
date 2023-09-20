@@ -1,14 +1,24 @@
-import styled from 'styled-components';
+import styled from "@emotion/styled";
 
-export const Container = styled.div`
-margin-top: 20px;
+
+
+export const Title = styled.h1`
+
+ text-align:center;
+ margin-top: 20px;
 `;
 
-export const Item = styled.p`
-font-size: 16px;
-margin-bottom: 5px;
-`;
+export const List = styled.ul`
 
-export const Value = styled.span`
-font-weight: bold;
-`;
+  font-size:20px;
+ list-style:none;
+ padding-left:20px;
+ padding-right:20px;
+ `;
+
+
+export const Item = styled.li`
+
+ display:flex;
+  justify-content: space-between;
+ `;

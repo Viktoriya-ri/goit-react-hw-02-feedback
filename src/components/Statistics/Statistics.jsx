@@ -1,25 +1,38 @@
-import React from "react";
-import PropTypes from 'prop-types';
-import { Container, Item, Value } from "./Statistics.styled";
+import React from 'react';
 
-const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+import {List,Title,Item} from './Statistics.styled';
+const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
   return (
-    <Container>
-      <Item>Good: <Value>{good}</Value></Item>
-      <Item>Neutral: <Value>{neutral}</Value></Item>
-      <Item>Bad: <Value>{bad}</Value></Item>
-      <Item>Total: <Value>{total}</Value></Item>
-      <Item>Positive feedback: <Value>{positivePercentage}%</Value></Item>
-    </Container>
-  );
-};
 
-Statistics.PropTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
+    <div>
+      <Title>Statistics</Title>
+      {total!==0 && (
+        <List>
+          <Item>
+            Good: <span>{good}</span>
+          </Item>
+          <Item>
+            Neutral: <span>{neutral}</span>
+          </Item>
+          <Item>
+            Bad: <span>{bad}</span>
+          </Item>
+          <Item>
+            Total: <span>{total}</span>
+          </Item>
+          <Item>
+            Positive feedback: <span>{Math.round(positivePercentage)}%</span>
+          </Item>
+        </List>
+      )}
+    </div>
+  );
 };
 
 export default Statistics;

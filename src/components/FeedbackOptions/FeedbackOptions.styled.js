@@ -1,19 +1,35 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
-export const Container = styled.div`
-margin-top: 20px;
-`;
+export const ButttonWrapper = styled.div `
 
-export const Button = styled.button`
-padding: 10px 20px;
-font-size: 16px;
-background-color: #f0f0f0;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-margin-right: 10px;
+display:flex;
+justify-content: space-around;
+
+`
+
+export const Button = styled.button `
+
+  background-color: #c2fbd7;
+  background-color: #FF4500;
+
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  touch-action: manipulation;
+
 
 :hover {
-  background-color: #e0e0e0;
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
 `
